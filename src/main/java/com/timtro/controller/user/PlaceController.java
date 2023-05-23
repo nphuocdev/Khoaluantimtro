@@ -283,27 +283,27 @@ public class PlaceController {
 			Category categorybean = categoryService.getCategoryId(litleCategory.getCategory().getCategoryId());
 			model.addAttribute("Category", categorybean);
 
-//			List<Review> reviewList = reviewService.getReviewByPlace(placeId);
-//
-//			List<ReviewReaction> reactionList = reviewReactionService.getReaction();
-//
-//			if(reviewList.size() > 0)
-//			{
-//				float s = 0, i = 0;
-//				for(Review review : reviewList) {
-//					s += (float)review.getRate();
-//					i++;
-//				}
-//				float rating = s/i;
-//				model.addAttribute("rating", rating);
-//			}
-//			else {
-//				model.addAttribute("rating", 0);
-//			}
-//
-//			model.addAttribute("reviewList", reviewList);
-//			model.addAttribute("reactionList", reactionList);
-//
+			List<Review> reviewList = reviewService.getReviewByPlace(placeId);
+
+			List<ReviewReaction> reactionList = reviewReactionService.getReaction();
+
+			if(reviewList.size() > 0)
+			{
+				float s = 0, i = 0;
+				for(Review review : reviewList) {
+					s += (float)review.getRate();
+					i++;
+				}
+				float rating = s/i;
+				model.addAttribute("rating", rating);
+			}
+			else {
+				model.addAttribute("rating", 0);
+			}
+
+			model.addAttribute("reviewList", reviewList);
+			model.addAttribute("reactionList", reactionList);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

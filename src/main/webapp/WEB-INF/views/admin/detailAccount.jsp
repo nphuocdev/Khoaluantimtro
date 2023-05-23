@@ -184,7 +184,7 @@
                 </c:forEach>
             </div>
             <c:if test="${places.size() > 4}" >
-                <u id="xemthem">Xem tất cả nhà/phòng</u>
+                <u id="xemthem">Xem tất cả phòng</u>
             </c:if>
             <br><br><br>
             <hr>
@@ -388,7 +388,8 @@
 <%--        </div>--%>
 <%--    </div>--%>
 <%--</div>--%>
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<%--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">--%>
 
 <script type="text/javascript">
     $(document).ready(function() {

@@ -190,7 +190,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Thông tin mục thuê</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Thông tin danh mục</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -199,7 +199,7 @@
                 <form action="" method="post" id="myFormId">
 
                     <div class="">
-                        <label class="">Tên nhà/phòng</label>
+                        <label class="">Tên phòng</label>
                         <input type="text" class="form-control-file " id="placeName" name="placeName">
                     </div>
                     <div class="">
@@ -221,7 +221,7 @@
                     </div>
 
                     <div class="">
-                        <label class="">Giá / 1 đêm</label>
+                        <label class="">Giá </label>
                         <input type="text" class="form-control-file " id="price" name="price">
                     </div>
 
@@ -245,7 +245,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Bạn có chắc chắn muốn xóa Nhà / phòng này?</p>
+                <p>Bạn có chắc chắn muốn xóa phòng này?</p>
             </div>
             <div class="modal-footer">
                 <a class="btn btn-primary" id="confirmDeleteButton" href="">Xóa</a>
@@ -254,11 +254,13 @@
         </div>
     </div>
 </div>
-
-
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<%--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">--%>
+<%--<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>--%>
+
+<%--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--%>
 <script type="text/javascript">
 
     function test() {

@@ -43,11 +43,11 @@ public class BecomeAHostController extends HttpServlet {
 	@Autowired
 	private LitleCategoryService litleCategoryService;
 	
-//	@Autowired
-//	private ReviewService reviewService;
-//
-//	@Autowired
-//	private ReviewReactionService reviewReactionService;
+	@Autowired
+	private ReviewService reviewService;
+
+	@Autowired
+	private ReviewReactionService reviewReactionService;
 
 //	@Autowired
 //	private CancelBookService cancelBookService;
@@ -99,26 +99,26 @@ public class BecomeAHostController extends HttpServlet {
 			List<Place> getPlaceByAccId = placeService.getPlaceByAccId(acc.getAccountId());
 			session.setAttribute("PlaceByAccId", getPlaceByAccId);
 
-//			List<String> ratings = new ArrayList<String>();
-//
-//			for (Place place : getPlaceByAccId) {
-//				float rating = 0;
-//				float sumReview = 0;
-//				List<Review> reviews = this.reviewService.getReviewByPlace(place.getPlaceId());
-//				for (Review review : reviews) {
-//					sumReview += review.getRate();
-//				}
-//				int n = reviews.size();
-//				if(n != 0) {
-//					rating = sumReview / (float)reviews.size();
-//				}
-//				if(n == 0) {
-//					ratings.add(0 + " ("+reviews.size()+")");
-//				}
-//				else
-//					ratings.add(rating + " ("+reviews.size()+")");
-//			}
-//			model.addAttribute("ratings", ratings);
+			List<String> ratings = new ArrayList<String>();
+
+			for (Place place : getPlaceByAccId) {
+				float rating = 0;
+				float sumReview = 0;
+				List<Review> reviews = this.reviewService.getReviewByPlace(place.getPlaceId());
+				for (Review review : reviews) {
+					sumReview += review.getRate();
+				}
+				int n = reviews.size();
+				if(n != 0) {
+					rating = sumReview / (float)reviews.size();
+				}
+				if(n == 0) {
+					ratings.add(0 + " ("+reviews.size()+")");
+				}
+				else
+					ratings.add(rating + " ("+reviews.size()+")");
+			}
+			model.addAttribute("ratings", ratings);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -144,27 +144,27 @@ public class BecomeAHostController extends HttpServlet {
 			Category categorybean = categoryService.getCategoryId(LitleCategory.getCategory().getCategoryId());
 			model.addAttribute("Category", categorybean);
 			
-//			List<Review> reviewList = reviewService.getReviewByPlace(placeId);
+			List<Review> reviewList = reviewService.getReviewByPlace(placeId);
+
+			List<ReviewReaction> reactionList = reviewReactionService.getReaction();
+
+			if(reviewList.size() > 0)
+			{
+				float s = 0, i = 0;
+				for(Review review : reviewList) {
+					s += (float)review.getRate();
+					i++;
+				}
+				float rating = s/i;
+				model.addAttribute("rating", (double) Math.ceil (rating * 100) / 100);
+			}
+			else {
+				model.addAttribute("rating", 0);
+			}
+
+			model.addAttribute("reviewList", reviewList);
+			model.addAttribute("reactionList", reactionList);
 //
-//			List<ReviewReaction> reactionList = reviewReactionService.getReaction();
-//
-//			if(reviewList.size() > 0)
-//			{
-//				float s = 0, i = 0;
-//				for(Review review : reviewList) {
-//					s += (float)review.getRate();
-//					i++;
-//				}
-//				float rating = s/i;
-//				model.addAttribute("rating", (double) Math.ceil (rating * 100) / 100);
-//			}
-//			else {
-//				model.addAttribute("rating", 0);
-//			}
-//
-//			model.addAttribute("reviewList", reviewList);
-//			model.addAttribute("reactionList", reactionList);
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -178,7 +178,7 @@ public class BecomeAHostController extends HttpServlet {
 	}
 	
 //	@RequestMapping(value="/become-a-host/detailplace/editdetail/{detailId}")
-//	public String EditDetailPlace(Model model, HttpServletRequest request, HttpSession session, @PathVariable long detailId) {
+//	public String EditDetailPlace( model, HttpServletRequest request, HttpSession session, @PathVariable long detailId) {
 //		try {
 //			String khach = request.getParameter("khach");
 //			String phongngu = request.getParameter("phongngu");
@@ -426,7 +426,7 @@ public class BecomeAHostController extends HttpServlet {
 			for(MultipartFile file : files) {
 				this.imageService.updateImages(place, file, request);
 			}
-//
+////
 //				int rs = placeService.EditImagePlace(imageNew, placeId);
 //				if (rs > 0) {
 //					model.addAttribute("addimgsuccess", "Thêm ảnh thành công");
