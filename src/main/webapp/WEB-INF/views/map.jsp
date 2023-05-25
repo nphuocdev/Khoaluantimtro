@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Map Timtro</title>
+    <title>Ban do</title>
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -55,9 +55,9 @@
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager-account">Thông tin cá nhân</a></li>
                                     <li><a href="/loveplace">Danh sách Yêu thích</a></li>
-                                    <li><a href="/bookroom">Nhà / phòng đã đặt</a></li>
+
                                     <hr>
-                                    <li><a href="/become-a-host/index">Chế độ chủ trọ</a></li>
+                                    <li><a href="/become-a-host/listings">Chế độ chủ nhà</a></li>
                                     <li><a href="/logout">Đăng xuất</a></li>
                                 </ul>
                             </li>
@@ -298,57 +298,7 @@
                                    type="number" value="1000">
                         </div>
                     </div>
-<%--                    <div class="filtertiennghi">--%>
-<%--                        <p>Tiện nghi</p><br>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="Bể bơi">--%>
-<%--                            <label > Bể bơi</label><br>--%>
-<%--                        </div>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="Bồn tắm nước nóng">--%>
-<%--                            <label > Bồn tắm nước nóng</label><br>--%>
-<%--                        </div>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="Lò sưởng trong nhà">--%>
-<%--                            <label > Lò sưởng trong nhà</label><br>--%>
-<%--                        </div>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="Thiết bị tập thể dục">--%>
-<%--                            <label > Thiết bị tập thể dục</label><br>--%>
-<%--                        </div>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="Bếp đốt lửa trại">--%>
-<%--                            <label > Bếp đốt lửa trại</label><br>--%>
-<%--                        </div>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="Khu vực ăn uống ngoài trời">--%>
-<%--                            <label > Khu vực ăn uống ngoài trời</label><br>--%>
-<%--                        </div>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="Wi-fi">--%>
-<%--                            <label > Wi-fi</label><br>--%>
-<%--                        </div>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="TV">--%>
-<%--                            <label > TV</label><br>--%>
-<%--                        </div>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="Bếp">--%>
-<%--                            <label > Bếp</label><br>--%>
-<%--                        </div>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="Máy giặt">--%>
-<%--                            <label > Máy giặt</label><br>--%>
-<%--                        </div>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="Điều hòa nhiệt độ">--%>
-<%--                            <label > Điều hòa nhiệt độ</label><br>--%>
-<%--                        </div>--%>
-<%--                        <div class="group-form f20">--%>
-<%--                            <input type="checkbox" name="tiennghi" value="Không gian riêng để làm việc">--%>
-<%--                            <label > Không gian riêng để làm việc</label><br>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
+
                 </div>
                 <div class="modal-footer" style="border-top:none">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

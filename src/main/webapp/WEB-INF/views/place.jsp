@@ -204,6 +204,15 @@
 
                             <div class="label1">
                                 <div style="padding-bottom: 7px"> ${item.price } đồng/ phòng</div>
+<%--                                <div>--%>
+<%--                                    Tình trạng phòng:--%>
+<%--                                    <c:choose>--%>
+<%--                                        <c:when test="${item.placeId.isEmpty == false }">--%>
+<%--                                            Đã hết--%>
+<%--                                        </c:when>--%>
+<%--                                        <c:otherwise>Còn phòng</c:otherwise>--%>
+<%--                                    </c:choose>--%>
+<%--                                </div>--%>
                                 <div class="float-left title-place1">
                                     <a style="color: #0c5460    " href="/detailplace/${item.placeId }">
                                         <b class="textoverflow1">${item.name }</b>
@@ -212,24 +221,7 @@
 
                             </div>
 
-<%--                            <div class="label1">--%>
-<%--                                <div class="float-left title-place2">--%>
-<%--                                    <i>${item.address.substring(item.address.lastIndexOf(",") + 1)}</i></div>--%>
-<%--                                <c:if test="${item.startDay != null && item.endDay != null}">--%>
-<%--                                    <c:if test="${item.startDay.split(\"-\")[1] == item.endDay.split(\"-\")[1]}">--%>
-<%--                                        <div class="float-right day-place">--%>
-<%--                                            Ngày ${item.startDay.split("-")[2]} - Ngày ${item.endDay.split("-")[2]}--%>
-<%--                                            tháng ${item.startDay.split("-")[1]}--%>
-<%--                                        </div>--%>
-<%--                                    </c:if>--%>
-<%--                                    <c:if test="${item.startDay.split(\"-\")[1] != item.endDay.split(\"-\")[1]}">--%>
-<%--                                        <div class="float-right day-place">--%>
-<%--                                            Ngày ${item.startDay.split("-")[2]} / ${item.startDay.split("-")[1]} ---%>
-<%--                                            Ngày ${item.endDay.split("-")[2]} / ${item.endDay.split("-")[1]}--%>
-<%--                                        </div>--%>
-<%--                                    </c:if>--%>
-<%--                                </c:if>--%>
-<%--                            </div>--%>
+
                         </div>
                     </div>
                 </td>
@@ -388,67 +380,17 @@
                     </div>
                     <div class="filter">
                         <div class="search">
-                            <p style="padding-left: 10px">Giá tối thiểu (USD/đêm)</p>
+                            <p style="padding-left: 10px">Giá tối thiểu</p>
                             <input name="price1" class="form-control" style="border: none;-webkit-box-shadow: none;" id="price1"
                                    type="number" value="0">
                         </div>
                         <div class="search">
-                            <p style="padding-left: 10px">Giá tối đa (USD/đêm)</p>
+                            <p style="padding-left: 10px">Giá tối đa </p>
                             <input name="price2" class="form-control" style="border: none;-webkit-box-shadow: none;" id="price2"
                                    type="number" value="1000">
                         </div>
                     </div>
-                    <%--                    <div class="filtertiennghi">--%>
-                    <%--                        <p>Tiện nghi</p><br>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="Bể bơi">--%>
-                    <%--                            <label > Bể bơi</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="Bồn tắm nước nóng">--%>
-                    <%--                            <label > Bồn tắm nước nóng</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="Lò sưởng trong nhà">--%>
-                    <%--                            <label > Lò sưởng trong nhà</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="Thiết bị tập thể dục">--%>
-                    <%--                            <label > Thiết bị tập thể dục</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="Bếp đốt lửa trại">--%>
-                    <%--                            <label > Bếp đốt lửa trại</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="Khu vực ăn uống ngoài trời">--%>
-                    <%--                            <label > Khu vực ăn uống ngoài trời</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="Wi-fi">--%>
-                    <%--                            <label > Wi-fi</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="TV">--%>
-                    <%--                            <label > TV</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="Bếp">--%>
-                    <%--                            <label > Bếp</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="Máy giặt">--%>
-                    <%--                            <label > Máy giặt</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="Điều hòa nhiệt độ">--%>
-                    <%--                            <label > Điều hòa nhiệt độ</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                        <div class="group-form f20">--%>
-                    <%--                            <input type="checkbox" name="tiennghi" value="Không gian riêng để làm việc">--%>
-                    <%--                            <label > Không gian riêng để làm việc</label><br>--%>
-                    <%--                        </div>--%>
-                    <%--                    </div>--%>
+
                 </div>
                 <div class="modal-footer" style="border-top:none">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

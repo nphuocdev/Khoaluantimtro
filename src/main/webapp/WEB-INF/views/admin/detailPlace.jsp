@@ -301,7 +301,7 @@
     </div>
 </div>
 </div>
-</div></body>
+</body>
 
 <script src="/asset/richtextediter/jquery.richtext.js"></script>
 <script src="/asset/richtextediter/jquery.richtext.min.js"></script>

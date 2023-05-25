@@ -81,33 +81,33 @@
 </header>
 <!--==============================Content=================================-->
 <div class="content" style="padding-bottom: 10px">
-
-    <!-- Blog Start -->
     <div class="blog">
         <div class="container">
+            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
 
-            <div style="padding-top: 80px;" class="row blog-page">
+            </div>
+            <div style="height: 400px;margin-bottom: 20px;margin-top: 80px" class="row blog-page">
 
 
                 <c:forEach var="i" items="${blogs }" varStatus="loop">
-                    <div style="height: 400px" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div style="padding-bottom: 50px" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="/asset/images/${i.image}" alt="Blog" class="setanh43">
+                                <img src="/asset/images/${i.image}" alt="Blog" style="height: 300px;width: fit-content" class="setanh43">
                             </div>
                             <div class="blog-text sethis">
                                 <a href="/show-blog/${i.blogId}">
-                                    <p class="title">${i.title}</p>
+                                    <p class="title"><b>${i.title}</b></p>
                                 </a>
                                 <div class="blog-meta">
                                     <p><i class="far fa-list-alt"></i>${i.account.name}</p>
                                     <p><i class="far fa-calendar-alt"></i>${i.createDate.split(" ")[0].split("-")[2] } - ${i.createDate.split(" ")[0].split("-")[1] } - ${i.createDate.split(" ")[0].split("-")[0] }</p>
-                                    <p><i class="far fa-comments"></i>5</p>
+<%--                                    <p><i class="far fa-comments"></i>5</p>--%>
                                 </div>
-                                <div  class="textoverflow3 settielws">
-                                    ${i.content}
+                                <div class="textoverflow3 settielws">
+<%--                                        ${i.content}--%>
                                 </div>
-                                <a class="btn" href="/show-blog/${i.blogId}" style="background-color: #90C9DC;color: black;  position: absolute;bottom: 20px;">Xem thêm <i class="fa fa-angle-right"></i></a>
+                                <a class="btn" href="/show-blog/${i.blogId}" style=" background-color:#90C9DC;position: absolute;bottom: 20px;">Xem thêm <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -115,8 +115,8 @@
 
 
             </div>
-    </div>
-    <!-- Blog End -->
+        </div>
+
 
 </div>
 

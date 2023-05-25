@@ -200,6 +200,7 @@
 						<p class="dtieude" style="padding-bottom: 30px">${detailPlace.address}
 
 					</div>
+
 					<div class="lovedetail" style="float: left">
 						<div style="padding-top: 20px;margin-right: 40px; text-align: right">
 							<c:choose>
@@ -216,6 +217,7 @@
 									</a>
 								</c:otherwise>
 							</c:choose>
+
 						</div>
 					</div>
 				</div>
@@ -252,6 +254,7 @@
 						<p class="u1">Mô tả nhà</p>
 						<p class="d-detail">${detailPlace.detail }</p>
 						<hr>
+						<br>
 
 						<p class="dtiennghi">Phòng trọ có:</p>
 						<div class="sewcpu6 dir dir-ltr" style="padding-bottom: calc( color: rgb(34, 34, 34); font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; --spacingBottom:3;"><div class="t5p7tdn dir dir-ltr" style="color: var(--f-k-smk-x); font-family: var(--e-ls-qkw); font-weight: var(--jx-zk-pv); font-size: var(--lhy-d-yl); line-height: var(--fme-bf-w);"><h2 tabindex="-1" class="hnwb2pb dir dir-ltr" elementtiming="LCP-target" style="box-sizing: border-box; margin: 0px; color: inherit; font-size: 1em; font-weight: inherit; line-height: inherit; outline: 0px; padding: 0px;"></h2><h2 tabindex="-1" class="hnwb2pb dir dir-ltr" elementtiming="LCP-target" style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: inherit; font-size: 1em; font-weight: inherit; line-height: inherit; padding: 0px;"><div class="sewcpu6 dir dir-ltr" style="padding-bottom: calc( var(--spacingBottomLargeAndAbove,var(--spacingBottom)) * var(--fgg-f-l-a) ); text-transform: none; --spacingBottom:3;"><div class="t5p7tdn dir dir-ltr" style="color: var(--f-k-smk-x); font-family: var(--e-ls-qkw); font-weight: var(--jx-zk-pv); font-size: var(--lhy-d-yl); line-height: var(--fme-bf-w);"></div></div><div class="_1byskwn" style="text-transform: none; -webkit-box-pack: start !important; -webkit-box-align: stretch !important; display: flex !important; align-items: stretch !important; justify-content: flex-start !important; flex-wrap: wrap !important; width: calc(100% + 16px) !important; margin-left: -8px !important; margin-right: -8px !important;"><div class="_19xnuo97" style="width: 334.663px; margin-left: 0px; margin-right: 0px; position: relative !important; padding-left: 8px !important; padding-right: 8px !important;"><div class="iikjzje i10xc1ab dir dir-ltr" style="display: flex; -webkit-box-align: center; align-items: center; -webkit-box-pack: end; justify-content: flex-end; flex-direction: row-reverse; max-width: 83.3333%; padding-bottom: 16px;"><div>Wi-fi</div>
@@ -385,7 +388,7 @@
 	
 	
 	 <!-- DELETE MODAL -->
-	 
+
 <%--	<div class="modal" id="modalThem" tabindex="-1" role="dialog">--%>
 <%--	  <div class="modal-dialog" role="document">--%>
 <%--	    <div class="modal-content">--%>
@@ -408,7 +411,7 @@
 
 	<%@ include file="/WEB-INF/views/layouts/keyMapAPI.jsp" %>
 	<script src="/asset/map/detailPlace.js" ></script>
-	
+
 <%--	<script>--%>
 
 <%--		const acc = '<c:out value="${detailPlace.account.accountId}"/>';--%>

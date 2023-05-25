@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Manager Account</title>
+    <title>Tài khoản</title>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="<%=request.getContextPath() %>/asset/css/stylenew.css">
     <%@ include file="/WEB-INF/views/layouts/head2.jsp" %>

@@ -248,12 +248,7 @@
         </div>
     </div>
 </div>
-<!-- Single Post End-->
 
-
-<!-- Footer Start -->
-
-<!-- Footer End -->
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 <%@ include file="/WEB-INF/views/layouts/footer.jsp" %>
