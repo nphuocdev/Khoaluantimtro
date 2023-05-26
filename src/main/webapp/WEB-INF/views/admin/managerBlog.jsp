@@ -313,7 +313,7 @@
     </div>
 </div></body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 <script src="/asset/richtextediter/jquery.richtext.js"></script>
 <script src="/asset/richtextediter/jquery.richtext.min.js"></script>

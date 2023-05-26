@@ -178,7 +178,7 @@ public class AccountControllerAdmin {
                     accountService.Register(account);
                     AccountRole accountRole = new AccountRole();
                     accountRole.setAccount(account);
-                    accountRole.setAppRole(appRoleService.findById(2));
+                    accountRole.setAppRole(appRoleService.findById(1));
                     accountRoleService.save(accountRole);
                     redirectAttributes.addFlashAttribute("msg", "addOK");
                 }

@@ -12,7 +12,7 @@ public class EmailService {
 
     public boolean sendEmail(String subject, String message, String to) {
         boolean f = false;
-        String from = "airtrip.office@gmail.com";
+        String from = "timtro.office@gmail.com";
         String host = "smtp.gmail.com";
         Properties properties = System.getProperties();
         System.out.println("PROPERTIES" + properties);
@@ -31,7 +31,7 @@ public class EmailService {
 
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("airtrip.office@gmail.com", "yuuic@123");
+                return new PasswordAuthentication("timtro.office@gmail.com", "yuuic@123");
             }
         });
         session.setDebug(true);

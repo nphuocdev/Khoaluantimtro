@@ -142,60 +142,11 @@
                 </c:when>
 
                 <c:otherwise>
-                <h5 style="text-align: center;"><b>Không có phòng nào được tìm thấy</b></h5>
+                <h5 style="text-align: center;"><b>Không có kết quả nào được tìm thấy</b></h5>
                 </c:otherwise>
                 </c:choose>
         </div>
         </table>
-        <table class="table itable" style="max-width: 100%;display: none;"  id="more">
-            <tr>
-                <div>
-                    <c:forEach var="item" items="${placeById }" varStatus="loop">
-                    <c:forEach var="rate" items="${ratings }" varStatus="i">
-                    <c:if test="${(loop.index > 2) && loop.index == i.index}">
-                    <input id="ed" value="${ item.placeId }" hidden/>
-                    <td style="min-width: 270px; max-width: 270px">
-                        <div class="iPlace" style="margin: 0">
-                            <div class="aa">
-											<span class="con1">
-												 <c:choose>
-                                                     <c:when test="${!Cart.containsKey(item.placeId) }">
-														<a data-id="${item.placeId }">
-															<i class="fas fa-heart" id="item-${ item.placeId }"
-                                                               style="color:white"></i>
-														</a>
-                                                     </c:when>
-                                                     <c:otherwise>
-														<a data-id="${item.placeId }">
-															<i class="fas fa-heart" id="item-${ item.placeId }"
-                                                               style="color:red"></i>
-														</a>
-                                                     </c:otherwise>
-                                                 </c:choose>
-											</span>
-                                <img src="/asset/images/${item.images[0].name }" alt="" width="260px" height="174px">
-                            </div>
-                            <div class="label1">
-                                <div>
-                                    <i class="fas fa-star"></i>${rate}
-                                </div>
-                                <a href="/detailplace/${item.placeId }">
-                                    <b class="textoverflow1" style="color:#1a2035">${item.name }</b>
-                                </a>
-                                <span class="textoverflow1">${item.address}</span>
-                            </div>
-                        </div>
-                    </td>
-                    <c:if test="${ (loop.index + 1) % 3 == 0 || (loop.index + 1) == placeList.size() }">
-            </tr>
-            </c:if>
-            </c:if>
-
-            </c:forEach>
-            </c:forEach>
-    </div>
-    </table>
-
     <u id="xemthem">Xem tất cả phòng</u>
     <hr>
 <%--    <div>--%>

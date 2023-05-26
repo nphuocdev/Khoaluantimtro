@@ -389,9 +389,9 @@
 <%--    </div>--%>
 <%--</div>--%>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<%--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">--%>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-<script type="text/javascript">
+// <script type="text/javascript">
     $(document).ready(function() {
 
         jQuery('.show-payment').click(function (evt) {
@@ -415,7 +415,7 @@
 
     });
 
-
+//
 </script>
 <script>
     document.getElementById("xemthem").onclick = function () {
