@@ -521,7 +521,7 @@
                     <div class=" d-md-flex">
                         <div  class="py-md-5">
                             <h3 style="text-align:center; color:#0c5460;font-size: 20px;font-weight: bold;">
-                                <b>Chào mừng bạn! Nhấn xác nhận để hoàn thành đăng kí</b>
+                                <b>Chào mừng bạn! Nhấn hoàn thành để đăng kí</b>
                             </h3>
                             <button onclick="return validate()"   style="padding:10px;background-color: #0d6efd;border:none;border-radius:5px;font-size: 20px; color:#ffffff;">Hoàn thành</button>
                         </div>

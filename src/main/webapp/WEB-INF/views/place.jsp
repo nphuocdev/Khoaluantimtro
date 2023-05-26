@@ -204,15 +204,15 @@
 
                             <div class="label1">
                                 <div style="padding-bottom: 7px"> ${item.price } đồng/ phòng</div>
-<%--                                <div>--%>
-<%--                                    Tình trạng phòng:--%>
-<%--                                    <c:choose>--%>
-<%--                                        <c:when test="${item.placeId.isEmpty == false }">--%>
-<%--                                            Đã hết--%>
-<%--                                        </c:when>--%>
-<%--                                        <c:otherwise>Còn phòng</c:otherwise>--%>
-<%--                                    </c:choose>--%>
-<%--                                </div>--%>
+                                <div>
+                                    Tình trạng:
+                                    <c:choose>
+                                        <c:when test="${item.isEmpty == false }">
+                                            Đã hết
+                                        </c:when>
+                                        <c:otherwise>Còn phòng</c:otherwise>
+                                    </c:choose>
+                                </div>
                                 <div class="float-left title-place1">
                                     <a style="color: #0c5460    " href="/detailplace/${item.placeId }">
                                         <b class="textoverflow1">${item.name }</b>

@@ -65,7 +65,7 @@
                         <ul class="sf-menu">
                             <li ><a style="font-weight: bold;font-size: 20px" href="<c:url value="/places" />">PHÒNG TRỌ</a></li>
                             <li> <a style="font-weight: bold;font-size: 20px" href="/show-map">BẢN ĐỒ</a></li>
-                            <li><a style="font-weight: bold;font-size: 20px" href="<c:url value="/become-a-host" />">TẠO PHÒNG </a></li>
+                            <li><a style="font-weight: bold;font-size: 20px" href="<c:url value="/become-a-host/listings" />">TẠO PHÒNG </a></li>
                             <li><a style="font-weight: bold;font-size: 20px" href="<c:url value="/blog" />">BLOG</a></li>
                             <li><a  style="font-weight: bold;font-size: 20px" href="<c:url value="/index" />">HỖ TRỢ</a></li>
                         </ul>
