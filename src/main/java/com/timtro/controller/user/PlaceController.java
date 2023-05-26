@@ -27,9 +27,6 @@ public class PlaceController {
 	@Autowired
 	private PlaceService placeBo;
 
-//	@Autowired
-//	private BookRoomService bookRoomService;
-
 	@Autowired
 	private LitleCategoryService litleCategoryService;
 

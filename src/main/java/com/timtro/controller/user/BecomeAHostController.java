@@ -33,9 +33,6 @@ public class BecomeAHostController extends HttpServlet {
 	
 	@Autowired
 	private PlaceService placeService;
-	
-//	@Autowired
-//	private BookRoomService bookRoomService;
 
 	@Autowired
 	private DetailPlaceService detailPlaceService;
@@ -48,9 +45,6 @@ public class BecomeAHostController extends HttpServlet {
 
 	@Autowired
 	private ReviewReactionService reviewReactionService;
-
-//	@Autowired
-//	private CancelBookService cancelBookService;
 
 	@Autowired
 	private ImageService imageService;
@@ -223,8 +217,6 @@ public class BecomeAHostController extends HttpServlet {
 	public ModelAndView allAccept(Model model, HttpSession session) {
 		try {
 			Account accLogin = (Account)session.getAttribute("accLogin");
-//			List<BookRoom> getBookRoomAllAcceptList = bookRoomService.getBookRoomAllAccept(accLogin.getAccountId());
-//			model.addAttribute("acceptList", getBookRoomAllAcceptList);
 			session.setAttribute("chooseHost", "tatca");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -236,8 +228,6 @@ public class BecomeAHostController extends HttpServlet {
 	public ModelAndView currentwelcoming(Model model, HttpServletRequest request, HttpSession session) {
 		try {
 			Account Account = (Account)session.getAttribute("accLogin");
-//			List<BookRoom> getBookRoomNoAcceptList = bookRoomService.getBookRoomAccept(Account.getAccountId(), false);
-//			model.addAttribute("acceptList", getBookRoomNoAcceptList);
 			session.setAttribute("chooseHost", "currentwelcoming");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -249,8 +239,6 @@ public class BecomeAHostController extends HttpServlet {
 	public ModelAndView comingsoon(Model model, HttpServletRequest request, HttpSession session) {
 		try {
 			Account Account = (Account)session.getAttribute("accLogin");
-//			List<BookRoom> getBookRoomisAcceptList = bookRoomService.getBookRoomCoomingSoon(Account.getAccountId(), 1, true);
-//			model.addAttribute("acceptList", getBookRoomisAcceptList);
 			session.setAttribute("chooseHost", "comingsoon");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -262,8 +250,6 @@ public class BecomeAHostController extends HttpServlet {
 	public ModelAndView chenkoutsoon(Model model, HttpServletRequest request, HttpSession session) {
 		try {
 			Account Account = (Account)session.getAttribute("accLogin");
-//			List<BookRoom> getBookRoomisAcceptList = bookRoomService.getBookRoomCheckoutSoon(Account.getAccountId(), 1, true);
-//			model.addAttribute("acceptList", getBookRoomisAcceptList);
 			session.setAttribute("chooseHost", "chenkoutsoon");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -275,8 +261,6 @@ public class BecomeAHostController extends HttpServlet {
 	public ModelAndView finish(Model model, HttpServletRequest request, HttpSession session) {
 		try {
 			Account Account = (Account)session.getAttribute("accLogin");
-//			List<BookRoom> getBookRoomisAcceptList = bookRoomService.getBookRoomByFinish(Account.getAccountId(), 1, true);
-//			model.addAttribute("acceptList", getBookRoomisAcceptList);
 			session.setAttribute("chooseHost", "finish");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -288,27 +272,13 @@ public class BecomeAHostController extends HttpServlet {
 	public ModelAndView cancel(Model model, HttpSession session) {
 		try {
 			Account accLogin = (Account)session.getAttribute("accLogin");
-//			List<BookRoom> getBookRoomAllAcceptList = bookRoomService.getBookRoomCancelHost(accLogin.getAccountId(), -1);
-//			model.addAttribute("acceptList", getBookRoomAllAcceptList);
 			session.setAttribute("chooseHost", "cancel");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return new ModelAndView("host/datphong");
 	}
-	
-	@RequestMapping(value="/become-a-host/upcoming/accept/{bookId}")
-	public String acceptBookRoom(Model model, HttpServletRequest request, HttpSession session, @PathVariable long bookId) {
-		try {
-//			bookRoomService.acceptBookRoom(bookId, 1);
-				model.addAttribute("acceptsuccess", "Xác nhận cho thuê phòng thành công!");
 
-		} catch (Exception e) {
-			e.printStackTrace();
-			model.addAttribute("acceptfail", "Thực hiện thất bại!");
-		}
-		return "redirect:"+request.getHeader("Referer");
-	}
 	
 	@RequestMapping(value="/become-a-host/detailplace/editdetail", method = RequestMethod.GET)
 	public @ResponseBody ResponseEntity<Object> updateDetail(

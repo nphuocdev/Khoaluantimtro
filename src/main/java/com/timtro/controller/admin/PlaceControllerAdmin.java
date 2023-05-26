@@ -27,8 +27,6 @@ public class PlaceControllerAdmin {
 
     private ReviewService reviewService;
 
-//    @Autowired
-//    private ReviewReactionService reviewReactionService;
 
     @Autowired
     private CategoryService categoryService;

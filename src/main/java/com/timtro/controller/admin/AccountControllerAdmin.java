@@ -36,14 +36,9 @@ public class AccountControllerAdmin {
     @Autowired
     private PlaceService placeService;
 
-//    @Autowired
-//    private ReviewService reviewService;
+    @Autowired
+    private ReviewService reviewService;
 
-//    @Autowired
-//    private PaymentService paymentService;
-//
-//    @Autowired
-//    private BookRoomService bookRoomService;
 
     @RequestMapping("/admin/manager-account")
     public String managerAccount (Model model, HttpServletRequest request) throws Exception{
@@ -212,29 +207,28 @@ public class AccountControllerAdmin {
         List<Place> placeList = placeService.getPlaceByAccId(accountId);
         model.addAttribute("places", placeList);
 
-//        List<String> ratings = new ArrayList<String>();
-//
-//        for (Place place : placeList) {
-//            float rating = 0;
-//            float sumReview = 0;
-//            List<Review> reviews = this.reviewService.getReviewByPlace(place.getPlaceId());
-//            for (Review review : reviews) {
-//                sumReview += review.getRate();
-//            }
-//            int n = reviews.size();
-//            if(n != 0) {
-//                rating = sumReview / (float)reviews.size();
-//            }
-//            if(n == 0) {
-//                ratings.add(0 + " ("+reviews.size()+")");
-//            }
-//            else
-//                ratings.add(rating + " ("+reviews.size()+")");
-//        }
-//        model.addAttribute("ratings", ratings);
+        List<String> ratings = new ArrayList<String>();
 
-//        List<BookRoom> bookRooms = bookRoomService.getBookRoomByAccount(accountId);
-//        model.addAttribute("bookroomList", bookRooms);
+        for (Place place : placeList) {
+            float rating = 0;
+            float sumReview = 0;
+            List<Review> reviews = this.reviewService.getReviewByPlace(place.getPlaceId());
+            for (Review review : reviews) {
+                sumReview += review.getRate();
+            }
+            int n = reviews.size();
+            if(n != 0) {
+                rating = sumReview / (float)reviews.size();
+            }
+            if(n == 0) {
+                ratings.add(0 + " ("+reviews.size()+")");
+            }
+            else
+                ratings.add(rating + " ("+reviews.size()+")");
+        }
+        model.addAttribute("ratings", ratings);
+
+
 
         return "admin/detailAccount";
     }

@@ -33,11 +33,7 @@ public class AccountAdmin {
     @Autowired
     private PlaceService placeService;
 
-//    @Autowired
-//    private BookRoomService bookRoomService;
-//
-//    @Autowired
-//    private PaymentService paymentService;
+
 
     @RequestMapping(value="/admin/login")
     public ModelAndView Login(Model model, HttpServletRequest request, HttpSession session) {
@@ -55,17 +51,10 @@ public class AccountAdmin {
         try {
             List<Account> accountList = accountService.getAccount();
             List<Place> placeList = placeService.getAllPlace();
-//            List<BookRoom> bookRooms = bookRoomService.getAllBookRoom();
-//            List<Payment> payments = paymentService.findAll();
-//            double doanhthu = 0;
-//            for (Payment payment : payments) {
-//                doanhthu += payment.getTotalPrice();
-//            }
 
             model.addAttribute("khachhang", accountList.size());
             model.addAttribute("nhaphong", placeList.size());
-//            model.addAttribute("datphong", bookRooms.size());
-//            model.addAttribute("giaodich", doanhthu);
+
         } catch (Exception e) {
             e.printStackTrace();
         }

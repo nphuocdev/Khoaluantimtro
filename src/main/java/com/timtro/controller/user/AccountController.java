@@ -45,8 +45,8 @@ public class AccountController {
 	@Autowired
 	private PlaceService placeService;
 
-//	@Autowired
-//	private ReviewService reviewService;
+	@Autowired
+	private ReviewService reviewService;
 
 //	@RequestMapping(value = "/admin/login", method = RequestMethod.GET)
 //	public String adminPage(Model model, Principal principal) {
@@ -263,7 +263,7 @@ public class AccountController {
 //		model.addAttribute("reviewById", reviewList);
 //
 //		List<String> ratings = new ArrayList<String>();
-//
+
 //		for (Place place : placeList) {
 //			float rating = 0;
 //			float sumReview = 0;
